@@ -55,7 +55,14 @@ export const BouquetBuilder: React.FC = () => {
 
   const handleCopyLink = async () => {
    try {
-     if (navigator.clipboard?.writeText) {
+     if (navigator.clipboard?.write) {
+       const html = `<a href="${shareUrl}">You received flowers! 🩷</a>`;
+       const clipboardData = {
+         'text/html': new Blob([html], { type: 'text/html' }),
+         'text/plain': new Blob([shareUrl], { type: 'text/plain' }),
+       };
+       await navigator.clipboard.write([new ClipboardItem(clipboardData)]);
+     } else if (navigator.clipboard?.writeText) {
        await navigator.clipboard.writeText(shareUrl);
      } else {
        const input = document.createElement('textarea');
