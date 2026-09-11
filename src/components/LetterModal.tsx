@@ -20,7 +20,7 @@ export const LetterModal: React.FC<LetterModalProps> = ({ message, isOpen, onClo
       >
         <button
           onClick={onClose}
-          className="absolute right-3 top-3 flex-shrink-0 transition-colors md:right-4 md:top-4"
+          className="absolute right-2 top-2 flex h-10 w-10 items-center justify-center rounded-full transition-colors md:right-4 md:top-4"
           style={{ color: colors.rose }}
         >
           <X size={20} />

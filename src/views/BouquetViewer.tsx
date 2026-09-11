@@ -53,10 +53,10 @@ export const BouquetViewer: React.FC = () => {
 
   return (
     <div
-      className={`min-h-screen py-6 md:py-8 px-4 flex flex-col items-center justify-center ${fontClasses.body}`}
+      className={`flex min-h-screen flex-col items-center px-4 py-6 sm:px-6 md:py-8 ${fontClasses.body}`}
       style={{ backgroundColor: '#FCB7C7' }}
     >
-      <h1 className={`${fontClasses.heading} text-2xl md:text-3xl mb-4 md:mb-6 text-center px-4`}
+      <h1 className={`${fontClasses.heading} mb-4 px-2 text-2xl text-center sm:mb-6 md:text-3xl`}
       style={{ color: colors.rose }}>
         You received a bouquet!
       </h1>
@@ -81,7 +81,7 @@ export const BouquetViewer: React.FC = () => {
 
       <button
         onClick={() => downloadLockscreenImage(bouquetState)}
-        className="mt-6 flex h-12 w-100 items-center justify-center gap-2 rounded-xl px-4 font-semibold shadow-lg transition-transform hover:scale-105 active:scale-95"
+        className="mt-6 flex h-12 w-full max-w-sm items-center justify-center gap-2 rounded-xl px-4 font-semibold shadow-lg transition-transform hover:scale-105 active:scale-95"
         style={{ backgroundColor: colors.sage, color: colors.cream }}
       >
         Download Image

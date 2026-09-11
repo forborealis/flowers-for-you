@@ -40,10 +40,10 @@ export const BouquetCreated: React.FC<BouquetCreatedProps> = ({
           </div>
 
           <div className="flex w-full max-w-[520px] flex-col items-center gap-3">
-            <div className="flex w-full justify-center gap-3">
+            <div className="flex w-full flex-col justify-center gap-3 sm:flex-row">
               <button
                 onClick={onDownload}
-                className="flex h-12 w-55 items-center justify-center gap-2 rounded-xl px-3 text-md font-semibold shadow-lg transition-transform active:scale-[0.99] cursor-pointer"
+                className="flex h-12 w-full max-w-xs items-center justify-center gap-2 rounded-xl px-3 text-md font-semibold shadow-lg transition-transform active:scale-[0.99] cursor-pointer"
                 style={{
                   backgroundColor: colors.sage,
                   color: colors.cream,
@@ -55,7 +55,7 @@ export const BouquetCreated: React.FC<BouquetCreatedProps> = ({
 
               <button
                 onClick={onCopyLink}
-                className="flex h-12 w-55 items-center justify-center gap-2 rounded-xl px-3 text-md font-semibold shadow-sm transition-colors cursor-pointer"
+                className="flex h-12 w-full max-w-xs items-center justify-center gap-2 rounded-xl px-3 text-md font-semibold shadow-sm transition-colors cursor-pointer"
                 style={{
                   backgroundColor: colors.sage,
                   color: colors.cream,
@@ -69,7 +69,7 @@ export const BouquetCreated: React.FC<BouquetCreatedProps> = ({
 
             <button
               onClick={onReset}
-              className="flex h-12 w-55 items-center justify-center gap-2 rounded-xl text-md font-bold shadow-sm cursor-pointer"
+              className="flex h-12 w-full max-w-xs items-center justify-center gap-2 rounded-xl text-md font-bold shadow-sm cursor-pointer"
               style={{ 
                 backgroundColor: colors.rose,
                 color: colors.cream,

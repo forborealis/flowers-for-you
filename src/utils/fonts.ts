@@ -3,7 +3,7 @@
  */
 
 export const fonts = {
-  nunito: 'font-nunito',
+  poppins: 'font-poppins',
   homemadeApple: 'font-homemade-apple',
 } as const;
 
@@ -13,6 +13,6 @@ export const fonts = {
  */
 export const fontClasses = {
   heading: fonts.homemadeApple,
-  body: fonts.nunito,
-  button: fonts.nunito,
+  body: fonts.poppins,
+  button: fonts.poppins,
 } as const;
